@@ -21,6 +21,8 @@ int binsearch(int a[],int n,int no) //FUNCTION FOR BINARY SEARCH TAKING ARRAY, S
     return(pos);
 }
 
+//TIME COMPLEXITY : O(log n)
+//SPACE COMPLEXITY : O(1)
 
 int main()
 {
