@@ -16,7 +16,7 @@ void bsort(int a[],int n)       //FUNTION FOR BUBBLE SORT TAKING ARRAY AND IT'S 
 }
 
 //TIME COMPLEXITY : О(n^2)
-//SPACE COMPLEXITY : O(1) auxiliary
+//SPACE COMPLEXITY : O(n)
 
 int main()
 {
