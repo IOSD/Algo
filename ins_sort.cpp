@@ -39,6 +39,6 @@ int main()                          //MAIN BODY
         cout<<a[i]<<endl;         //PRINTING OF MODIFIED ARRAY
     }
     system("pause");
+    delete a;
     return 0;
-
 }

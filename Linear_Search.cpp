@@ -29,6 +29,7 @@ int main()
     else
         cout<<"POSITON : "<<k<<endl;
     system("pause");
+    delete arr;
     return 0;
-}
 
+}
