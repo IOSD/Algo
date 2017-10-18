@@ -31,8 +31,8 @@ int main()
     cout<<"\nSorted Array:";
     for(int i=0;i<n;i++)                //DISPLAY OF SORTED ARRAY
         cout<<b[i]<<"\n";
+
+    delete b;
     return 0;
-    
+
 }
-
-

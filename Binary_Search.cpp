@@ -39,6 +39,8 @@ int main()
         cout<<"\nNO. not found.";
     else
         cout<<"\nNO. found at position:"<<no+1;
-    return 0;
-    
+        delete b;
+        return 0;
+
 }
+
