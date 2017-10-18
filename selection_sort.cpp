@@ -14,14 +14,14 @@ void selectsort(int p[], int size)
 
 		for( int j=t+1; j<size; j++)
 		{
-			if(p[j]<min)
+			if(p[j]<min)				//checking the minimum no.
 			{	
-				min=p[j];
+				min=p[j];				//taking the position of minimum no.
 				pos=j;
 			}
 			
 		}
-
+										//swap the minimum no. with the first element ith the runninf loop
 		temp=p[t];			
 		p[t]=p[pos];
 		p[pos]=temp;
