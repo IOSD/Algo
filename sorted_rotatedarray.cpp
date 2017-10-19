@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
-
+///program to find the pivot element in a sorted rotated array
+///time complexity= O(log(n))
+///space complexity = O(1)
+///method used = BINARY SEARCH
 int main()
 
 {
@@ -8,7 +11,7 @@ int main()
     cin>>n;
     arr=new int[n]; //dynamic initialization of the  array
     for(int i=0;i<n;i++)
-        cin>>arr[i];
+        cin>>arr[i];        //input for the array
 
     int s=0,e=n-1;int mid;
     while(s<=e)
@@ -17,7 +20,7 @@ int main()
 
         mid=(s+e)/2;
         if((arr[mid]>arr[mid+1])&&(mid<e))
-            {cout<<mid;break;}
+            {cout<<mid;break;}             ///checking for pivot element
         if((arr[mid]<arr[mid-1])&&(mid>s))
             {cout<<mid-1;break;}
 
