@@ -41,6 +41,9 @@ void print_primes(bool sieve[], unsigned long long int size)
         }
     }
 }
+//TIME COMPLEXITY-O(nlog(log(n)))
+//SPACE COMPLEXITY-O(n)
+
 int main(){
 unsigned long long int n;
 cin>>n;
