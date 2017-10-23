@@ -1,5 +1,5 @@
 def cal(x,a):
-    i=1
+    i=0
     x=1
     while i<=a:
         x*=x**i
