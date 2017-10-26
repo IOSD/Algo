@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int FastExpo(int b, int p)
+long long int FastExpo(int b, int p)
 {
 	/if the power is 0 return 1
 	if(!p)
