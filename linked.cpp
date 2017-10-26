@@ -77,5 +77,5 @@ void main()
     }
 
     else
-    cout<<"WRONG CHOICE"<<;
+    cout<<"WRONG CHOICE"<<endl;
 }
