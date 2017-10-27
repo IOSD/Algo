@@ -14,9 +14,10 @@ int binsearch(int a[],int n,int no) //FUNCTION FOR BINARY SEARCH TAKING ARRAY, S
             break;
         }
         if(a[mid]>no)
-            last=mid-1;
+            last=mid-1; //FUNCTION WILL START SEARCHING AGAIN FROM STARTING OF ARRAY TO ELEMENT BEFORE THE MIDDLE ONE
         else
-            beg=mid+1;
+            beg=mid+1;  //FUNCTION WILL START SEARCHING AGAIN FROM ELEMENT AFTER MIDDLE ONE TILL THE LAST ELEMENT
+
     }
     return(pos);
 }
