@@ -1,0 +1,96 @@
+#include<iostream.h>
+#include<conio.h>
+#include<process.h>
+
+
+//TIME COMPLEXITY - 0(n)
+//space complexity - 0(n)
+struct Node {                                       //structure for pointer
+	       int info;
+	       Node * next;
+	    } *top,*newptr,*save,*ptr;
+Node*Create_New_Node(int n)                           //function in structure to create a new pointer
+    {   ptr = new Node;
+	ptr -> info = n;
+	ptr -> next = NULL;
+	return ptr;
+    }
+void Push(Node* np)                                     //function to insert new pointer created 
+    {
+	if(top == NULL)
+	    top = np;
+	else
+	  { save = top;
+	    top = np;
+	    np->next=save;
+	  }
+    }
+void Pop()                                                     //function to delete element form queue
+    {
+	 if(top==NULL)
+	      cout<<"\n Underflow ";
+	 else
+	  {  cout<<"deletion started";
+	     ptr=top;
+	      top=top->next;
+	      delete ptr;
+	  }
+    }
+
+void Display(Node*np)                                           //function to display the elements of queue
+    {  	 while(np!=NULL)
+	    {   cout<<np->info<<"  ";
+		np = np->next;
+	    }
+
+    }
+void main()
+{
+   clrscr();
+	top=NULL;                                                      //initially the stack must be empty
+	int item,choice;
+	char ch='y',ch1='y';
+	while(ch1=='y'||ch1=='Y')
+	{   cout<<"\n\t\t***** MENU *****";
+	    cout<<"\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+	    cout<<"\n\t 1. Push";
+	    cout<<"\n\t 2. Pop";
+	    cout<<"\n\t 3. Display";
+	    cout<<"\n\t 4. Exit";
+	    cout<<"\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+	    cout<<"\n Enter your choice ";
+	    cin>>choice;
+	      switch(choice)
+		{   case 1: while(ch=='y'||ch=='Y')
+			       {   cout<<"\n Enter information for the new node ";
+				   cin>>item;
+				   newptr = Create_New_Node(item);                                        //calling of function
+				   if(newptr==NULL)
+				      cout<<"\n Cannot create new node ";                             //if the pointer to be added is null, it can't be added
+				   Push(newptr);
+				   cout<<"\n Do you want to insert more (press y) : ";
+				   cin>>ch;
+
+			       }
+			    break;
+
+		    case 2: while(ch=='y'||ch=='Y')
+			       {   Pop();
+				   cout<<"\n List is: ";
+				   Display(top);                                                              //calling of function
+				   cout<<"\n Want to delete more nodes (press y): ";
+				   cin>>ch;
+			       }
+			    break;
+
+		    case 3: cout<<"\n List is : ";
+			    Display(top);                                                                 //calling of function
+			    break;
+
+		    case 4: exit(0);
+	       }
+	   cout<<"\n Do you want to continue ";
+	   cin>>ch1;
+       }
+getch();
+}
