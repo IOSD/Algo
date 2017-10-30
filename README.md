@@ -10,7 +10,7 @@ Use this repo to study or review your knowledge and don't forget to star and col
 
 ### Search Algorithms
  - Linear Search
- - binary search
+ - Binary search
  - Ternary search
 
 ### Sorting Algorithms
@@ -30,19 +30,19 @@ Use this repo to study or review your knowledge and don't forget to star and col
 
 ### Common Data Structures
 
- - heap
- - queue
- - stack
+ - Heap
+ - Queue
+ - Stack
  - Array
  - Linked List
 
 ## Languages Used:
 
  - C++
- - python
+ - Python
  - Java 
  - C
- - More to come
+ - Many more to come
 
 ## How to contribute:
 
