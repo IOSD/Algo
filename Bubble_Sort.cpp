@@ -6,13 +6,20 @@ void bsort(int a[],int n)       //FUNTION FOR BUBBLE SORT TAKING ARRAY AND IT'S 
 {
     int t;
     for(int i=1;i<n;i++)
-        for(int j=0;j<n-i;j++)
+    {bool swap = false;
+        
+    for(int j=0;j<n-i;j++)
+        
             if(a[j+1]<a[j])
             {
                 t=a[j];
                 a[j]=a[j+1];
                 a[j+1]=t;
+                swap = true;
             }
+}
+    if(!swap)
+        break;
 }
 
 //TIME COMPLEXITY : О(n^2)
