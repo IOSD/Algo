@@ -32,7 +32,7 @@ Use this repo to study or review your knowledge and don't forget to star and col
 
  - heap
  - queue
- - stack
+ - Stack
  - Array
  - Linked List
 
