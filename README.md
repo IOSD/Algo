@@ -31,8 +31,8 @@ Use this repo to study or review your knowledge and don't forget to star and col
 ### Common Data Structures
 
  - heap
- - queue
- - stack
+ - Queue
+ - Stack
  - Array
  - Linked List
 
