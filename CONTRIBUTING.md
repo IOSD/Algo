@@ -1,6 +1,6 @@
 <h1>Contributing Guidelines</h1>
 
-<p>Thanks for taking the time to contribute to this project. Before making PRs, please note the following:</p>
+<p>Thanks for taking the time to contribute to this project. Before making Pull Requests, please note the following:</p>
 
 <h3>A few norms you should follow</h3>
   <ul>
@@ -15,7 +15,7 @@
     <li>Give your files names that are relevant and meaningful.</li>
   </ul>
 
-<h4>You may add your solved questions on spoj, codechef, hackerearth, hackerrank and codeforces.</h4>
+<h4>You may add your solved questions on Spoj, Codechef, Hackerearth, Hackerrank and Codeforces.</h4>
   <ul>
     <li>First line of your code must begin with a comment mentioning the link of the question</li>
     <li>Place the solutions in seperate folder "ques" in relevant directory</li>
