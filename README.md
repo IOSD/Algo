@@ -10,7 +10,7 @@ Use this repo to study or review your knowledge and don't forget to star and col
 
 ### Search Algorithms
  - Linear Search
- - binary search
+ - Binary search
  - Ternary search
 
 ### Sorting Algorithms
