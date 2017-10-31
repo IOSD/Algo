@@ -1,4 +1,5 @@
 //MERGE SORT
+//TIME COMPLEXITY-O(nlog(n))
 #include<iostream>
 using namespace std;
 void selsort(int a[],int n)         //SELSORT TO ARRANGE INPUT OF ARRAY IN ASCENDING
