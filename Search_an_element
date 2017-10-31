@@ -1,0 +1,86 @@
+#include<iostream>
+using namespace std;
+void ls(int arr[10],int n)
+{
+ int k=0;
+ int x,i,j;
+ cout<<"enter the number to be searched"<<endl;
+ cin>>x;
+ for(i=0;i<n;i++)
+ {
+ if(arr[i]==x)
+ k++;
+ }
+ if(k>0)
+ {
+ cout<<"this number exists in the array"<<endl;
+ }
+ else
+ {
+ cout<<"number not found"<<endl;
+ }
+}
+
+void bs(int arr[10],int n)
+{
+ int flag=0;
+ int mid,x;
+ int beg=0; int end=n-1;
+ cout<<"enter the number to be searched"<<endl;
+ cin>>x;
+ while(beg<=end)
+ {
+  mid=(beg+end)/2;
+  if(x==arr[mid])
+  {
+  flag++;
+  break;
+  }
+  else if(x>arr[mid])
+  {
+  beg=mid+1;
+  }
+  else
+  {
+  end=mid-1;
+  }
+ }
+ if(flag>0)
+ cout<<"number exists"<<endl;
+ else
+ cout<<"number not found"<<endl;
+}
+
+
+int main()
+{
+ 
+ int arr[10],s,ch;
+ char ans;
+ cout<<"enter the size of the array"<<endl;
+ cin>>s;
+ cout<<"enter the elements of the array"<<endl;
+ for(int i=0;i<s;i++)
+ {
+ cin>>arr[i];
+ }
+ do
+ {
+ cout<<"1.linear search \n2.binary search"<<endl;
+ cin>>ch;
+ switch(ch)
+ {
+ case 1:
+ ls(arr,s);
+ break;
+ case 2:
+ bs(arr,s);
+ break;
+ default:
+ cout<<"invalid choice entered"<<endl;
+ break;
+ }
+cout<<"do you wish to continue? answer in y/n, only"<<endl;
+cin>>ans;
+}while(ans=='y');
+}
