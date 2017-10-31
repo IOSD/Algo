@@ -1,0 +1,73 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	
+	int queue[10], front, rear, ch, i;
+	char ans;
+	front=rear=-1;
+	do
+	{
+		cout<<"Press 1 to insert"<<endl;
+		cout<<"Press 2 to delete"<<endl;
+		cout<<"Press 3 to display"<<endl;
+		cout<<"ENTER YOUR CHOICE"<<endl;
+		cin>>ch;
+		switch(ch)
+			{
+				case 1:
+				if(front==-1)
+			{
+				front=0;
+			}
+				rear=rear+1;
+				if(rear>9)
+				{
+					cout<<"can not insert"<<endl;
+					rear=rear-1;
+				}
+				else
+					{
+						cout<<"enter the element"<<endl;
+						cin>>queue[rear];
+					}
+						break;
+				case 2:
+				if(front==-1)
+				{
+					cout<<"can not delete"<<endl;
+				}
+					else
+				{
+				cout<<"deleted information is"<<queue[front]<<endl;
+				front=front+1;
+				if(front>rear)
+				{	
+					front=rear=-1;
+				}
+				}
+				break;
+				case 3:
+				if(front==-1)
+				{
+				cout<<"can not display"<<endl;
+				}
+				else
+				{
+				for(i=front;i<=rear;i++)
+					{
+					cout<<queue[i]<<" "<<endl;
+					}
+				}
+				break;
+				default:
+				cout<<"invalid choice"<<endl;
+				}
+				cout<<"wanna continue?(y/n)"<<endl;
+				cin>>ans;
+				}
+	while(ans=='y');
+	
+}
