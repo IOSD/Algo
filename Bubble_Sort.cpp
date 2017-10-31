@@ -2,11 +2,11 @@
 #include<iostream>
 using namespace std;
 
-void bsort(int a[],int n)       //FUNTION FOR BUBBLE SORT TAKING ARRAY AND IT'S SIZE AS ARGUMENTS
+void bsort(int a[],int n)       //FUNCTION FOR BUBBLE SORT TAKING ARRAY AND IT'S SIZE AS ARGUMENTS
 {
     int t;
     for(int i=1;i<n;i++)
-    {bool swap = false;
+    {bool swap = false;//
         
     for(int j=0;j<n-i;j++)
         
