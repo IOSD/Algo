@@ -30,7 +30,7 @@ Use this repo to study or review your knowledge and don't forget to star and col
 
 ### Common Data Structures
 
- - heap
+ - Heap
  - queue
  - stack
  - Array
