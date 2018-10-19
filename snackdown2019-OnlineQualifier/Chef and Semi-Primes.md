@@ -1,6 +1,6 @@
-import java.util.Scanner;
+		import java.util.Scanner;
 
-class semiPrimes {
+		class semiPrimes {
 
 	static int checkSemiprime(int num) {
 		int cnt = 0;
