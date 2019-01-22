@@ -11,7 +11,7 @@ Fixes #<!--Enter Issue number you have referenced(please refer only one issue at
 - [ ] My branch is up-to-date with the master branch.
 - [ ] I have added tests that prove my fix is effective or that my feature works
 - [ ] I have added necessary documentation (if appropriate)
-- [ ] The contents added are completelt original and have no copyright issues.
+- [ ] The contents added are completely original and have no copyright issues.
 
 #### Short description of what this resolves:
 
