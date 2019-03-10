@@ -1,5 +1,6 @@
 //BINARY SEARCH ALGORITHM
 #include<iostream>
+
 using namespace std;
 
 int binsearch(int a[],int n,int no) //FUNCTION FOR BINARY SEARCH TAKING ARRAY, SIZE AND NO. TO BE SEARCHED AS ARGUMENTS
