@@ -9,9 +9,9 @@ Use this repository to study or review your knowledge and don't forget to star a
 ## Contents:
 
 ### Search Algorithms
- - Linear Search
- - binary search
- - Ternary search
+ - Linear Search.
+ - binary search.
+ - Ternary search.
 
 ### Sorting Algorithms
 
