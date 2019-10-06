@@ -1,3 +1,8 @@
+QUESTION: Give Xor of range from L to R (where L and R are left and right limits)
+
+Xor property is that a number xor itself gives 0
+N^N=0
+
 First we try to solve the problem of XOR of numbers 1 to N.
 
 NAIVE METHOD:
@@ -29,7 +34,7 @@ Find the remainder of N by moduling it with 4.
 
 
 
-NOW back to our problem of XOR of a given range L to R (left to right)
+NOW back to our problem of XOR of a given range L to R (left to right)--
 
 Solution: We simply find xor of range 1 to L-1 and xor of range 1 to R by above efficient method.
 Since we know Xor of a number with itself is 0 (N^N=0) so XOR(1 to L-1) will cancel out XOR(1 to L-1) in range 1 to R, leaving only XOR(L to R) only
