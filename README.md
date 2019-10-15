@@ -4,14 +4,14 @@
 ## Overview:
 This repo is a conglomeration of algorithms for competitive programming, data structure, sorting and related areas. It currently features C/C++, Python and some Java implementations. It contains many advanced algorithms like greedy, graph traversal algorithms, including Dijkstra's algorithm and Floyd Warshal algorithm, and data structures like queues, stacks, and binary search trees. Contributions are highly prized.
 
-Use this repo to study or review your knowledge and don't forget to star and collaborate!
+Use this repository to study or review your knowledge and don't forget to star and collaborate!
 
 ## Contents:
 
 ### Search Algorithms
- - Linear Search
- - binary search
- - Ternary search
+ - Linear Search.
+ - binary search.
+ - Ternary search.
 
 ### Sorting Algorithms
 

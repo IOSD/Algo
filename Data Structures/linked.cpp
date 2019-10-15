@@ -3,6 +3,7 @@
 
 #include <iostream.h>
 #include <conio.h>
+
 struct link
 {	int n;
 	link *next;								//self referential pointer
