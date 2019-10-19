@@ -1,0 +1,40 @@
+problem: https://www.codechef.com/HCS12019/problems/SETH0006
+
+Java Solution
+import java.util.*;
+import java.io.*;
+class Codechef{
+	public static void main(String[] args) throws IOException {
+		int i,l,r,j,result=0,k;boolean status=true;int countdigits=0,temp;int[] digits= {0,0,0,0,0,0};
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		String[] A=br.readLine().split(" ");
+		l=Integer.parseInt(A[0]);r=Integer.parseInt(A[1]);
+		
+		for(i=l;i<r&&status==true;i++) {
+			/*
+			 * countdigits=0; result=-99; temp=i; while(temp>0)
+			 * {temp=temp/10;countdigits++;}
+			 */
+			temp=i;
+			
+			Set<Integer> check = new HashSet<Integer>();
+		    int count = 0;       
+		    while (temp > 0) {                           
+		        int array = temp % 10;
+		        check.add(array);
+		        temp = temp / 10;
+		        count++;
+		    }
+
+		    if (count == check.size()) {
+		        System.out.println(i);status=false;
+		    }
+			
+		
+		}
+		
+		if(status==true) System.out.println("-1");
+	
+	}
+
+}
