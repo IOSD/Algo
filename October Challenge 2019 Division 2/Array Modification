@@ -1,0 +1,46 @@
+Problem link https://www.codechef.com/OCT19B/problems/MARM
+
+Solution
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int test;
+		
+		try{
+		    final Scanner scanner = new Scanner(System.in);
+		    test=scanner.nextInt();
+		    
+		    while(test-- >0){
+		        
+		        long n, k, a, b;
+		        
+		        n=scanner.nextLong();
+		        k=scanner.nextLong();
+		        
+		        long[] arr = new long[(int)n];
+		        for(long i=0; i<n; ++i){
+		            arr[(int)i]=scanner.nextLong();
+		        }
+		        
+		        for(long i=0; i<k; ++i){
+		            arr[(int)(i%n)]=arr[(int)(i%n)]^arr[(int)(n-(i%n)-1)];
+		        }
+		        
+		        for(long i=0; i<n; ++i){
+		             System.out.print(arr[(int)i]+" ");
+		        }
+		        
+		        
+		        System.out.println();
+		    }
+		}catch(Exception exp){
+		    exp.printStackTrace();
+		}
+	}
+}
