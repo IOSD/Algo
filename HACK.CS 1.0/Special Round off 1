@@ -1,0 +1,120 @@
+https://www.codechef.com/HCS12019/problems/SETH0001
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int test=sc.nextInt();int c; long n;long last; String num="";int len=0;boolean check;
+		while(test-->0)
+		{
+	//	String[] entry=sc.nextLine().split(" ");
+	//	n=Long.valueOf(entry[0]);
+		//c=Integer.valueOf(entry[1]);
+		check=false;
+		n=sc.nextLong();
+		c=sc.nextInt();
+		num=String.valueOf(n);
+	//	System.out.println("num is="+num);
+		len=num.length();
+	//	System.out.println("len is="+len);
+	    	while(true)
+		    { 
+		        if(len==c)
+		        {
+		            break;
+		        }
+		    if(c==1)
+		     {
+		        last=n%10;
+		        if(last>=5 && last<=9)
+		        {
+		            n=n/100;
+		            n=n*10+last;
+		            n=n*10+last;
+		        }
+		        else
+		        {
+		            n=n/10;
+		        }
+		       num=String.valueOf(n);
+		        len=num.length();
+		        //System.out.println("num is="+num);
+		         if(len==c)
+		        {
+		            break;
+		        }
+		     }
+		     if(len<c)
+		     {
+		         n=n*(long)Math.pow(10,c-len);
+		        //  System.out.println("n with pow is="+n);
+		        num=String.valueOf(n);
+		        len=num.length();
+		        //System.out.println("length with pow is="+len);
+		        //System.out.println("num is="+num);
+		         if(len==c)
+		        {
+		            break;
+		        }
+		         
+		     }
+		     if(sum(n,c)>=5 && sum(n,c)<=9)
+		     {
+		         long d=sum(n,c);
+		         n=n/(long)Math.pow(10,c);
+		         n=n*10+d;
+		        num=String.valueOf(n);
+		        len=num.length();
+		      //  System.out.println("num is="+num);
+		         if(len==c)
+		        {
+		            break;
+		        }
+		     }
+		     if(sum(n,c)<5)
+		     {
+		         n=n/(long)Math.pow(10,c);
+		        num=String.valueOf(n);
+		        len=num.length();
+		      //  System.out.println("num is="+num);
+		         if(len==c)
+		        {
+		            break;
+		        }
+		     }
+	     	}
+	     	System.out.println(n);
+		}
+		
+		
+	}
+	static long sum(long n,int c)
+	{  int pos=0;long ans=0;
+	    while(pos==c)
+	    {
+	        ans=ans+(n%10);
+	        n=n/10;
+	        pos++;
+	    }
+	    long k=0;
+	    while(ans>9)
+	    {
+	        k=ans;
+	        ans=0;
+	        while(k!=0)
+	        {
+	            ans=ans+(k%10);
+	            k=k/10;
+	        }
+	    }
+	    return ans;
+	}
+}
