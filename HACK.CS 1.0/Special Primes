@@ -1,1 +1,107 @@
+https://www.codechef.com/HCS12019/problems/SETH0007
+
+java solution
+
+import java.util.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.Collections; 
+class special
+{
+    static HashSet<Integer> set = new HashSet<Integer>();
+    public static void main(String[] args) {
+        FastReader sc=new FastReader();
+        int c=sc.nextInt();
+        long n=sc.nextLong();
+        long answer=1;
+        int mod=1000000007;
+        primeFactors(c);
+        for(int i: set)
+            answer=((answer%mod)*(f(n,(long)i)%mod))%mod;
+
+        System.out.println(answer);
+    }
+    static long f(long n, long p)
+    {
+        for(long i=p;i<=n;i=i*p)
+            if(n%i==0)
+                return i;
+
+        return 1;
+    }
+    static void primeFactors(int n) 
+    {
+        while (n%2==0) 
+        { 
+            set.add(2); 
+            n /= 2; 
+        }
+        for (int i = 3; i <= Math.sqrt(n); i+= 2) 
+        {
+            while (n%i == 0) 
+            { 
+                set.add(i);
+                n /= i; 
+            } 
+        }
+        if (n > 2) 
+            set.add(n); 
+    } 
+}
+class FastReader 
+{ 
+        BufferedReader br; 
+        StringTokenizer st; 
+  
+        public FastReader() 
+        { 
+            br = new BufferedReader(new
+                     InputStreamReader(System.in)); 
+        } 
+  
+        String next() 
+        { 
+            while (st == null || !st.hasMoreElements()) 
+            { 
+                try
+                { 
+                    st = new StringTokenizer(br.readLine()); 
+                } 
+                catch (IOException  e) 
+                { 
+                    e.printStackTrace(); 
+                } 
+            } 
+            return st.nextToken(); 
+        } 
+  
+        int nextInt() 
+        { 
+            return Integer.parseInt(next()); 
+        } 
+  
+        long nextLong() 
+        { 
+            return Long.parseLong(next()); 
+        } 
+  
+        double nextDouble() 
+        { 
+            return Double.parseDouble(next()); 
+        } 
+  
+        String nextLine() 
+        { 
+            String str = ""; 
+            try
+            { 
+                str = br.readLine(); 
+            } 
+            catch (IOException e) 
+            { 
+                e.printStackTrace(); 
+            } 
+            return str; 
+        } 
+}
 
