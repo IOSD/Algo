@@ -1,0 +1,31 @@
+#include <iostream>
+ 
+using namespace std;  
+  
+int getMinimum(int a, int b){
+    if(a >= b)
+        return b;
+    else
+        return a;
+}
+  
+int main() {  
+    int a, b, min, i, gcd = 1;  
+    /* 
+     * Take two numbers as input from user  
+     */
+    cout << "Enter Two Integers\n";  
+    cin >> a >> b;  
+    
+    min = getMinimum(a, b);
+    // Search for larget number less than min which divides both a and b
+    for(i = 1; i <= min; i++) {  
+        if(a%i==0 && b%i==0) {
+            /* Update GCD to new larger value */
+            gcd = i;  
+        }  
+    }  
+    
+    cout << "GCD of " << a << " and " << b << " is " << gcd; 
+    return 0;  
+}
