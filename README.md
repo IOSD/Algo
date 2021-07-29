@@ -39,10 +39,10 @@ Use this repo to study or review your knowledge and don't forget to star and col
 ## Languages Used:
 
  - C++
- - python
+ - Python
  - Java 
  - C
- - More to come
+ - Many more.
 
 ## How to contribute:
 
