@@ -1,4 +1,3 @@
-//Sachin Singla
 
 #include <iostream>
 using namespace std;
