@@ -1,4 +1,4 @@
-//krishna
+//Krishna Rai
 #include<iostream>
 using namespace std;
 
