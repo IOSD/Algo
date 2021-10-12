@@ -1,4 +1,5 @@
 //http://www.spoj.com/problems/TDBFS/
+//5star
 #include<bits/stdc++.h>
 #define dout if(debugg) cout<<" "
 using namespace std;
