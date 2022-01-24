@@ -1,0 +1,76 @@
+QUESTION: Give Xor of range from L to R (where L and R are left and right limits)
+
+Xor property is that a number xor itself gives 0
+N^N=0
+
+First we try to solve the problem of XOR of numbers 1 to N.
+
+NAIVE METHOD:
+Run a loop from 1 to N, string xor of each every iteration.
+
+Examples :
+Input : N = 6
+Output : 7
+// 1 ^ 2 ^ 3 ^ 4 ^ 5 ^ 6  = 7
+
+int xor=0;
+for(int i=1; i<=N; i++){
+    xor=xor^i;
+}
+cout<<xor;
+
+EFFICIENT METHOD:
+BUT, we can do better by observing a pattern here.
+
+Input : N = 7
+Output : 0
+// 1 ^ 2 ^ 3 ^ 4 ^ 5 ^ 6 ^ 7 = 0
+Solution:
+Find the remainder of N by moduling it with 4.
+-If rem = 0, then xor will be same as N.
+-If rem = 1, then xor will be 1.
+-If rem = 2, then xor will be N+1.
+-If rem = 3 ,then xor will be 0.
+
+
+
+NOW back to our problem of XOR of a given range L to R (left to right)--
+
+Solution: We simply find xor of range 1 to L-1 and xor of range 1 to R by above efficient method.
+Since we know Xor of a number with itself is 0 (N^N=0) so XOR(1 to L-1) will cancel out XOR(1 to L-1) in range 1 to R, leaving only XOR(L to R) only
+
+CPP--->
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    int L=3, R=7, Lxor=1, Rxor=1, totalxor=1;  // We are finding XOR from 3 to 7 
+    
+    //Find XOR for range 1 to L-1
+    int l=L-1;       
+    if(l%4==0)
+        Lxor=l;
+    else if(l%4==1)
+        Lxor=1;
+    else if(l%4==2)
+        Lxor=l+1;
+    else
+        Lxor=0;
+        
+    //Find XOR for range 1 to R
+    if(R%4==0)
+        Rxor=R;
+    else if(R%4==1)
+        Rxor=1;
+    else if(R%4==2)
+        Rxor=R+1;
+    else
+        Rxor=0;
+    //Total Xor is L to R
+    totalxor=Lxor^Rxor;
+
+    cout<<totalxor;
+
+    return 0;
+}

@@ -1,0 +1,36 @@
+def spiralOrder(matrix):
+    res = []
+    if len(matrix) == 0:
+        return res           
+    row_begin = 0                                         # goes top to bottom
+    col_begin = 0                                          # goes left to right
+    row_end = len(matrix)-1                                 # goes bottom to top
+    col_end = len(matrix[0])-1                                # goes right to left
+    while (row_begin <= row_end and col_begin <= col_end):
+        for i in range(col_begin,col_end+1):
+            res.append(matrix[row_begin][i])                  #traverse top row
+        row_begin += 1
+        for i in range(row_begin,row_end+1):                      #traverse right-most column
+            res.append(matrix[i][col_end])
+        col_end -= 1
+        if (row_begin <= row_end):
+            for i in range(col_end,col_begin-1,-1):               #traverse bottom-most row
+                res.append(matrix[row_end][i])
+            row_end -= 1
+        if (col_begin <= col_end):
+            for i in range(row_end,row_begin-1,-1):                #traverse left-most column
+                res.append(matrix[i][col_begin])
+            col_begin += 1
+    return res
+    
+matrix=[
+ [ 1, 2, 3 ],
+ [ 4, 5, 6 ],
+ [ 7, 8, 9 ]
+]
+print(spiralOrder(matrix))
+
+
+
+
+OUTPUT: [1,2,3,6,9,8,7,4,5]
