@@ -13,6 +13,8 @@
       </ul>
     <li>Place your code in right directory.</li>
     <li>Give your files names that are relevant and meaningful.</li>
+  <li>If you are new to project, check with the team first before making requests which will be helpful for you and more efficient.<li/>
+  <li>Try to make new requests independent of old ones.<li/>
   </ul>
 
 <h4>You may add your solved questions on spoj, codechef, hackerearth, hackerrank, leetcode and codeforces.</h4>
