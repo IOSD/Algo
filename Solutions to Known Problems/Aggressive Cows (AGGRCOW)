@@ -1,0 +1,51 @@
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+bool canPlace(int mid, vector<int> vector1, int i);
+
+
+int main() {
+    int nupin;
+    cin>>nupin;
+    while(nupin-->0)
+    {
+        int c, n;
+        cin>>n>>c;
+        vector<int> stallLocations;
+        int largest = 0;
+        while(n-->0)
+        {
+            int k;
+            cin>>k;
+            largest = k>largest?k:largest;
+            stallLocations.push_back(k);
+        }
+        sort(stallLocations.begin(),stallLocations.end());
+        int start = 0;
+        int end = stallLocations[stallLocations.size()-1];
+        while(start<=end)
+        {
+            int mid = (start+end)/2;
+            if(mid==start) break;
+            if(canPlace(mid, stallLocations, c)) start = mid;
+            else end = mid;
+        }
+        cout<<start<<endl;
+    }
+}
+
+bool canPlace(int mid, vector<int> vector1, int c) {
+
+    int curr_positon = vector1[0];
+    int cows=1;
+    for(int i=1;i<vector1.size();i++)
+    {
+        if(vector1[i]-curr_positon>=mid)
+        {
+            curr_positon = vector1[i];
+            cows++;
+        }
+    }
+
+    return cows >= c;
+}
