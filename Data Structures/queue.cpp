@@ -1,13 +1,17 @@
 #include <iostream.h>
 #include <conio.h>
 #include <process.h>
+
 struct node
 {	int number;
 	node *next;									//self referential node
 };
 node *add_Q(node *rear, int val);				//fuction to add elements in queue
+
 node *del_Q(node *front, int &val);				//fuction to delete elements from queue
+
 void show_Q(node *front);						//fuction to show elements in queue
+
 void main()
 {          clrscr();
 	   node *front, *rear;
