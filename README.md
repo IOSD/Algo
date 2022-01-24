@@ -39,10 +39,10 @@ Use this repo to study or review your knowledge, coontributee for hacktober fest
 ## Languages Used:
 
  - C++
- - python
+ - Python
  - Java 
  - C
- - More to come
+ - Many more.
 
 ## How to contribute:
 
